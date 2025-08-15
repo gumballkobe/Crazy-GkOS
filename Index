@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>your gay</title>
+  <style>
+    :root{
+      --min: 28px;
+      --fluid: 10vw;
+      --max: 120px;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #000;
+      color: #fff;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      text-rendering: optimizeLegibility;
+    }
+    .text {
+      font-size: clamp(var(--min), var(--fluid), var(--max));
+      line-height: 1.1;
+      font-weight: 400;
+      text-align: center;
+      margin: 0 4vw; /* guards against edge clipping on tiny screens */
+      white-space: nowrap; /* keep it on one line for larger screens */
+    }
+    .text b { font-weight: 800; }
+
+    /* Allow wrapping on ultra-small devices if needed */
+    @media (max-width: 360px) {
+      .text { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+  <div class="text">your <b>gay</b></div>
+</body>
+</html>
